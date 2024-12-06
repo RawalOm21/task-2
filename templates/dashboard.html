@@ -1,0 +1,18 @@
+{% extends "home.html" %}
+{% block content %}
+
+  <div class="container">
+    <h2>  welcome to dashboard page </h2>
+      {% if user %}
+          <p> welcome {{ user.username }} </p>
+              <ul>
+                  <li>Name : {{user[1] }}</li>
+                  <li>Email : {{user[2] }}</li>
+              </ul>    
+              <a href="/logout" class="btn btn-primary">Logout</a>
+      {% endif %}
+  </div>
+
+{% endblock %}
+
+
